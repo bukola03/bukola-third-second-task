@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact {
+	text-align: right;
+	display: flex;
+	padding: 10px 50px;
+	justify-content: end;
+}
+
+.contact p {
+	padding-left: 20px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 50px;
+}
+
+nav h2 {
+	color: #ef4b42;
+}
+
+nav div {
+	display: flex;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+ul li {
+	margin-left: 30px;
+}
+
+nav .btn {
+	border: 2px solid #ef4b42;
+	color: #ef4b42;
+	border-radius: 20px;
+	padding: 5px 20px;
+	background-color: transparent;
+	margin-left: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.container {
+	margin: 0px 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	align-items: center;
+}
+
+.content {
+	padding: 20px;
+}
+
+.content h2 {
+	font-size: 50px;
+	padding: 30px 0px;
+}
+
+.content p {
+	font-size: 30px;
+	padding: 10px 0px;
+}
+
+.content button {
+	background-color: #ef4b42;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+	border-radius: 50px;
+	margin-top: 30px;
+	padding: 10px 40px;
+}
+
+.image img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Hamburger button for desktop screens (hidden) */
+.hamburger-btn {
+	display: none;
+}
+
+/* Mobile menu styles */
+.menu-container {
+	display: flex;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.menu li {
+	margin-left: 30px;
+}
+
+/* Media query for small screens (mobile) */
+@media screen and (max-width: 768px) {
+	.hamburger-btn {
+		display: block;
+		background: none;
+		border: none;
+		font-size: 24px;
+		cursor: pointer;
+	}
+
+	nav {
+		background-color: #ef4b42;
+	}
+
+	nav h2 {
+		color: #fff;
+	}
+
+	.hamburger-btn {
+		color: #fff;
+	}
+
+	/* Hide the regular menu on mobile */
+	.menu-container {
+		display: none;
+	}
+
+	/* Styles for showing the mobile menu when the show-menu class is applied */
+	.menu-container.show-menu {
+		display: flex;
+		flex-direction: row;
+		background-color: #ef4b42;
+		color: #fff;
+		font-size: 16px;
+		padding: 20px;
+		position: absolute;
+		justify-content: center;
+		top: 120px;
+		right: 0;
+		width: 100%;
+	}
+
+	.menu-container.show-menu .menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.menu-container.show-menu .btn {
+		display: none;
+	}
+
+	.show-menu .menu li {
+		margin-left: 0;
+		padding: 10px 0;
+		text-align: center;
+	}
+
+	.container {
+		margin: 0px 10px;
+		display: block;
+		text-align: center;
+	}
+
+	.content {
+		padding: 20px;
+	}
+
+	.content h2 {
+		font-size: 46px;
+		padding: 30px 0px;
+	}
+
+	.content p {
+		font-size: 30px;
+		padding: 10px 0px;
+	}
+}
